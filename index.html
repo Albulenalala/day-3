@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            display: grid;
+            grid-template: 
+            "header  header  header " 50px
+            "left-menu main   right-menu " 1fr
+            "footer   footer  footer" 50px /
+            200px  1fr  200px;
+
+        }
+        header{
+            background-color: aqua;
+            grid-area: header;
+
+        }
+        .left-menu{
+            background-color: brown;
+            grid-area: left-menu;
+        }
+        .right-menu{
+            background-color: green;
+            grid-area: right-menu;
+        }
+        main{
+            background-color: blue;
+            grid-area: main;
+        }
+        footer{
+            background-color: rgb(230, 1, 1);
+            grid-area: footer;
+        }
+        @media screen and (max-width: 800px) {
+          
+            .container{
+            grid-template: 
+            "header " 50px
+            "left-menu" 1fr  
+            "main" 2fr
+            "right-menu" 1fr
+            "footer " 1fr /
+           1fr;
+
+        }
+        }
+            
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <header>Header</header>
+    <div class="left-menu">
+        Left menu
+    </div>
+    <main>
+        Main
+    </main>
+    <div class="right-menu">
+        right-menu
+    </div>
+    <footer>
+        footer
+    </footer>
+
+</div>
+
+</body>
+
+</html>

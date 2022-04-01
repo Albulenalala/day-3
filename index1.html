@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            display: grid;
+            grid-template:
+             "menu header header " 1fr
+            "column1 column2 column3" 3fr /
+            minmax(200px, 1fr) 1fr auto ;
+            grid-gap: 10px;
+        }
+        header{
+            background-color: blueviolet;
+            grid-area: header;
+        }
+        .menu{
+            background-color: blue;
+            grid-area: menu;
+        }
+        .column1{
+            background-color: brown;
+            grid-area: column1;
+            display: grid;
+            place-items: start center;
+        }
+        .column2{
+            background-color: aqua;
+            grid-area: column2;
+        }
+        .column3{
+            background-color: bisque;
+            grid-area: column3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Main</header>
+        <div class="menu">menu</div>
+        <div class="column1">column1</div>
+        <div class="column2">column2</div>
+        <div class="column3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis maxime accusamus cumque enim excepturi officia, magnam blanditiis aspernatur delectus nesciunt ullam! Odit ratione natus, accusamus quas ab temporibus dicta totam.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-boxs;
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template:
+                "header  header header header header " 1fr 
+                " inbox  main  main  quick-settings class " 5fr 
+                " menu   main  main  quick-settins  class" 3fr / 
+                200px 1fr 1fr;
+            grid-gap: 5px;
+        }
+
+        header {
+            background-color: aqua;
+            grid-area: header;
+        }
+
+        .inbox {
+            background-color: bisque;
+            grid-area: inbox;
+
+        }
+
+        .main {
+            background-color: blueviolet;
+            grid-area: main;
+        }
+
+        .menu {
+            background-color: aquamarine;
+            grid-area: menu;
+        }
+
+        .quick-settings {
+            background-color: beige;
+            grid-area: quick-settings;
+        }
+
+        .class {
+            background-color: rgb(131, 160, 98);
+            grid-area: class;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>Header</header>
+
+        <div class="inbox">Inbox</div>
+        <div class="main">Main</div>
+        <div class="quick-settings">Quick Settings </div>
+        <div class="menu">Menu</div>
+        <div class="class">Class</div>
+
+    </div>
+</body>
+
+</html>
